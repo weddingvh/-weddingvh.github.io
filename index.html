@@ -158,16 +158,16 @@
         var markerRoot = new THREE.Group();
         scene.add(markerRoot);
 
-        var geometry1 = new THREE.BoxGeometry(1.2, 1.2, 1.2);
+        var geometry1 = new THREE.BoxGeometry(2, 2, 2);
         var mesh1 = new THREE.Mesh(geometry1, materialBox);
-        mesh1.position.y = 0.5;
+        mesh1.position.y = 0;
         mesh1.material.needsUpdate = true;
         markerRoot.add(mesh1);
 
         var mesh2 = new THREE.Mesh();
         var loader2 = new THREE.ObjectLoader();
         loader2.load("./models/ring.json ", function(obj) {
-            obj.position.y = 1.5;
+            obj.position.y = 2.3;
             obj.scale.set(1, 1, 1);
             mesh2.add(obj);
         });
